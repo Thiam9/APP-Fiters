@@ -1,0 +1,73 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title List Card
+    link(href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet")
+    link(rel="stylesheet" href="/public/style.css")
+    link(rel="stylesheet" href="/public/bootstrap.css")
+
+    header
+
+.cont1
+    .cont2
+
+        block section
+
+            form( method="post" class="crd")
+                .form.group
+                    label Number card:
+                    input(type="number" name="id" class="form-control" required)
+                .form.group
+                    label Entreprise:
+                    input(type="text" name="entreprise" class="form-control")
+                .form.group
+                    label Secteur:
+                    input(type="text" name="secteur" class="form-control")
+                .form.group
+                    label Ville:
+                    input(type="ville" name="ville" class="form-control")
+
+
+                    input(type="submit" class="btn btn-primary ajt" value="Ajouter Card")
+    .cont3
+        .cont4
+
+        each datas in data
+            .card.text-white.bg-primary.mb-3(style='min-width: 12rem; max-height:18rem')
+                .card-body
+                    h5.card-title= datas.entreprise
+                    h5.card-title= datas.secteur
+                    h5.card-title= datas.ville
+
+                .card-body
+                a.card-link.sup(href="/" + datas.id) Supprimer
+
+
+
+
+        //- table.table.table-dark
+        //-     thead
+        //-         tr
+        //-         th(scope='col') Number card
+        //-         th(scope='col') Entreprise
+        //-         th(scope='col') Secteur
+        //-         th(scope='col') Ville
+
+        //-     tbody
+        //-         each datas in data
+        //-             tr  
+
+        //-                 td= datas.id
+        //-                 td= datas.entreprise
+        //-                 td= datas.secteur
+        //-                 td= datas.ville
+        //-                 td  
+        //-                     a(href="/" + datas.id) Sup
+
+
+
+
+
+
+
